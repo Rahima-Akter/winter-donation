@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "title": "Winter Clothing for Dhaka Division",
+        "image": "https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/1/2015/12/soundofhope-600x400.jpg",
+        "description": "A campaign to collect and distribute warm clothing to families in need across Dhaka Division. We are accepting jackets, sweaters, and thermal wear.",
+        "status": "Active",
+        "contactInfo": "dhaka_winter_campaign@example.com",
+        "division": "Dhaka"
+    },
+    {
+        "id": 2,
+        "title": "Winter Clothing for Chittagong Division",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWRpdhQz66rooHDmZ09q8RxsagilQdA1u7gw&s",
+        "description": "A drive to provide warm clothing to the underserved communities in the chilly areas of Chittagong Division.",
+        "status": "Active",
+        "contactInfo": "chittagong_winter_campaign@example.com",
+        "division": "Chittagong"
+    },
+    {
+        "id": 3,
+        "title": "Cold Protection for Sylhet Division",
+        "image": "https://www.ucanews.com/uploads/2023/01/check-caritas-offers-warm-clothes-as-cold-spell-hits-bangladesh-63b561171a35b_600.jpeg",
+        "description": "Helping the vulnerable people of Sylhet Division by providing them with blankets, sweaters, and winter wear.",
+        "status": "Pending",
+        "contactInfo": "sylhet_winter_campaign@example.com",
+        "division": "Sylhet"
+    },
+    {
+        "id": 4,
+        "title": "Winter Clothing Drive for Rajshahi Division",
+        "image": "https://img.freepik.com/premium-photo/three-happy-friends-shopping-clothes-vintage-clothing-store_14117-1164962.jpg",
+        "description": "Support for Rajshahi Division with winter clothing for homeless individuals and marginalized families.",
+        "status": "Active",
+        "contactInfo": "rajshahi_winter_campaign@example.com",
+        "division": "Rajshahi"
+    },
+    {
+        "id": 5,
+        "title": "Winter Clothing Relief for Barishal Division",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRTIvxjAhvA2opFiNRROia17ZqUIzJzK1yuhXbDCnWY5wcip3Vi1o0phHg_cahH1pm7xo&usqp=CAU",
+        "description": "Providing warm winter clothing, including jackets and gloves, to people in Barishal Division.",
+        "status": "Completed",
+        "contactInfo": "barishal_winter_campaign@example.com",
+        "division": "Barishal"
+    },
+    {
+        "id": 6,
+        "title": "Warmth for Khulna Division",
+        "image": "https://www.tbsnews.net/sites/default/files/styles/big_2/public/images/2022/01/20/grameen_uniqlo_donation_photos_1.jpg",
+        "description": "Donation campaign for distributing warm clothing to families in need during the cold months in Khulna Division.",
+        "status": "Active",
+        "contactInfo": "khulna_winter_campaign@example.com",
+        "division": "Khulna"
+    },
+    {
+        "id": 7,
+        "title": "Help for Rangpur Division: Winter Clothing",
+        "image": "https://aarnafoundationindia.org/wp-content/uploads/2018/12/WhatsApp-Image-2018-11-29-at-12.43.02-PM.jpg",
+        "description": "Winter clothing donation campaign aimed at helping underprivileged communities in Rangpur Division during the cold season.",
+        "status": "Active",
+        "contactInfo": "rangpur_winter_campaign@example.com",
+        "division": "Rangpur"
+    },
+    {
+        "id": 8,
+        "title": "Winter Aid for Mymensingh Division",
+        "image": "https://muslimaid-2022.storage.googleapis.com/upload/www.muslimaid.org/media-centre/news/18-02-14_12-10-09_winter-distrubution-bangladesh1%20%28copy%202%29.jpg",
+        "description": "Collecting jackets, sweaters, and other cold-weather clothing to aid people in Mymensingh Division.",
+        "status": "Pending",
+        "contactInfo": "mymensingh_winter_campaign@example.com",
+        "division": "Mymensingh"
+    },
+    {
+        "id": 9,
+        "title": "Chilling Winter Aid in Cumilla",
+        "image": "https://amt-live.storage.googleapis.com/upload/www.almustafatrust.org/other/IMG_6668.JPG",
+        "description": "A donation campaign to help people in the Cumilla region get essential warm clothing for the winter.",
+        "status": "Active",
+        "contactInfo": "cumilla_winter_campaign@example.com",
+        "division": "Chittagong"
+    },
+    {
+        "id": 10,
+        "title": "Winter Warmth for Khulna and Sundarbans",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoTYSDvIcAK7zEgX28teZnql8mq24AF8r_uMe6xq_m0TAD-Ts-NZla1BvVgOK3ZnVyeBo&usqp=CAU",
+        "description": "Special campaign for providing winter clothing to the remote regions of Khulna Division, including the Sundarbans.",
+        "status": "Active",
+        "contactInfo": "sundarbans_winter_campaign@example.com",
+        "division": "Khulna"
+    },
+    {
+        "id": 11,
+        "title": "Winter Clothing Donation for Naogaon",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSofWk48GSjdqHbOY6nNIT1wvmLl0fxEpv8_zT9wCjLeF-25nO4J-VFRK1FLJ-LFczGQg4&usqp=CAU",
+        "description": "Aiming to provide coats, jackets, and blankets for the cold winter season to those in Naogaon district.",
+        "status": "Active",
+        "contactInfo": "naogaon_winter_campaign@example.com",
+        "division": "Rajshahi"
+    },
+    {
+        "id": 12,
+        "title": "Help for The Poor in Jessore",
+        "image": "https://eefng.org/wp-content/uploads/2017/05/eef_slider1-870x432.jpg",
+        "description": "Winter clothing donation drive in Jessore to help local communities who suffer from the winter chill.",
+        "status": "Completed",
+        "contactInfo": "jessore_winter_campaign@example.com",
+        "division": "Khulna"
+    },
+    {
+        "id": 13,
+        "title": "Bagerhat Winter Support Campaign",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuldBC-n10mUr3JxgMBwpyT873PIKK4bACkHWwzM_CTO91FbCgL3tXo7LMwvVQcEXYiw4&usqp=CAU",
+        "description": "Winter wear donation for the people in Bagerhat to help them survive the cold months.",
+        "status": "Pending",
+        "contactInfo": "bagerhat_winter_campaign@example.com",
+        "division": "Khulna"
+    },
+    {
+        "id": 14,
+        "title": "Winter Clothing for Faridpur District",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFBjvdSOgYOl7twJWbdz8u6aIHguce9qPDu0c0dpq-9_F-T9ZajulH7Vslo8IysX3bVbc&usqp=CAU",
+        "description": "Providing winter clothing to the underprivileged communities of Faridpur district in the Dhaka Division.",
+        "status": "Active",
+        "contactInfo": "faridpur_winter_campaign@example.com",
+        "division": "Dhaka"
+    },
+    {
+        "id": 15,
+        "title": "Winter Clothes for the People of Jamalpur",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe5vO5-RHkZU2naouq2f8UhqJpdl80RNqQPA&s",
+        "description": "Collecting warm clothing to distribute to families in need in Jamalpur during the harsh winter months.",
+        "status": "Active",
+        "contactInfo": "jamalpur_winter_campaign@example.com",
+        "division": "Mymensingh"
+    },
+    {
+        "id": 16,
+        "title": "Brahmanbaria Winter Clothing Campaign",
+        "image": "https://i0.wp.com/blog.daffodil.family/wp-content/uploads/2020/02/Winter-Clothes-Distribution.jpg?fit=2190%2C1730",
+        "description": "A donation drive for the cold winter season to help the underprivileged people in Brahmanbaria district.",
+        "status": "Active",
+        "contactInfo": "brahmanbaria_winter_campaign@example.com",
+        "division": "Chittagong"
+    },
+    {
+        "id": 17,
+        "title": "Winter Relief for People of Comilla",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXYStKUN_VumhpQBccEcL_aanAvj7Wm_Xi8R7vVuqNVuiYx21Z_nQdhIGpXKKZT6B0vt8&usqp=CAU",
+        "description": "Distributing warm clothing such as jackets, sweaters, and socks to the families in Comilla Division.",
+        "status": "Active",
+        "contactInfo": "comilla_winter_campaign@example.com",
+        "division": "Chittagong"
+    },
+    {
+        "id": 18,
+        "title": "Warm Clothing for Netrokona",
+        "image": "https://yatan.org/wp-content/uploads/2022/02/Blanket-Donation-Campaign4-500x400-1.webp",
+        "description": "A campaign dedicated to providing jackets, gloves, and blankets to the people of Netrokona district.",
+        "status": "Completed",
+        "contactInfo": "netrokona_winter_campaign@example.com",
+        "division": "Mymensingh"
+    },
+    {
+        "id": 19,
+        "title": "Winter Aid for the Poor of Bogura",
+        "image": "https://srs-foundation.org/wp-content/uploads/2022/01/blc-main.jpeg",
+        "description": "A campaign to collect winter clothes and distribute them to people in need in Bogura district of Rajshahi Division.",
+        "status": "Pending",
+        "contactInfo": "bogura_winter_campaign@example.com",
+        "division": "Rajshahi"
+    },
+    {
+        "id": 20,
+        "title": "Help for the Cold in Kurigram",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL9w4UqeRhYwg_7ywsC9fFrjpaNHa2Tn3P0dVz2yQENF1J1eV2He1eLjCTLe9uY8WYKrY&usqp=CAU",
+        "description": "Helping the cold-affected people in Kurigram with the donation of blankets, coats, and other warm clothing.",
+        "status": "Active",
+        "contactInfo": "kurigram_winter_campaign@example.com",
+        "division": "Rangpur"
+    }
+]

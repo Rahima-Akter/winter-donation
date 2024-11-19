@@ -1,0 +1,59 @@
+[
+    {
+        "type": "instructions",
+        "content": [
+            "Select a cause or division you want to support.",
+            "Complete the donation form with your personal details.",
+            "Choose from the available payment methods, including bKash, Nagad, or Rocket.",
+            "Submit your donation. You will receive a confirmation via SMS or email."
+        ]
+    },
+    {
+        "type": "collectionPoints",
+        "content": [
+            {
+                "name": "Dhaka Collection Center",
+                "address": "House 123, Road 10, Gulshan-2, Dhaka",
+                "contact": "Phone: +880 1234-567890"
+            },
+            {
+                "name": "Chattogram Donation Point",
+                "address": "15 Agrabad Commercial Area, Chattogram",
+                "contact": "Phone: +880 9876-543210"
+            },
+            {
+                "name": "Sylhet Regional Office",
+                "address": "Zindabazar Main Road, Sylhet",
+                "contact": "Phone: +880 1711-223344"
+            },
+            
+            {
+                "name": "Khulna Drop-off Location",
+                "address": "45 KDA Avenue, Khulna",
+                "contact": "Phone: +880 1999-887766"
+            },
+            {
+                "name": "Barishal Support Point",
+                "address": "Barishal City Center, Sadar Road",
+                "contact": "Phone: +880 1444-556677"
+            },
+            {
+                "name": "Rangpur Collection Point",
+                "address": "Court Road, Rangpur Sadar",
+                "contact": "Phone: +880 1666-778899"
+            }
+        ]
+    },
+    {
+        "type": "supportedDivisions",
+        "content": [
+            "Health & Wellness",
+            "Education for Underprivileged Children",
+            "Emergency Disaster Relief",
+            "Women Empowerment Programs",
+            "Flood Relief and Rehabilitation",
+            "Environmental Conservation in Rural Areas",
+            "Food & Water Security in Remote Regions"
+        ]
+    }
+]

@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+a.active {
+    color: #15C8A0;
+}
+
+.glass{
+/* From https://css.glass */
+background: rgba(193, 103, 103, 0.48);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.9px);
+-webkit-backdrop-filter: blur(6.9px);
+border: 1px solid rgba(199, 192, 192, 1);
+}
