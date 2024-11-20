@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../../Context/Context";
 
 const Login = () => {
-    const { handleGoogleLogin, logIn, setUser, hadleForgetPassword} = useContext(authContext)
+    const { handleGoogleLogin, logIn, setUser, setLoading } = useContext(authContext)
     const emailRef = useRef()
     const [show, setShow] = useState(false)
     const location = useLocation()
@@ -23,24 +23,17 @@ const Login = () => {
         const password = e.target.password.value;
         // console.log(name, password)
         logIn(email, password)
-        .then(res => {
-            setUser(res.user)
-            navigate(location.state.from)
-        })
-        .catch(err => {
-            console.log('Error', err)
-        })
+            .then(res => {
+                navigate(location.state.from)
+                setUser(res.user)
+                setLoading(true)
+            })
+            .catch(err => {
+                console.log('Error', err)
+            })
     }
 
-    // forget password
-    const forgetPassword = () => {
-        const email = emailRef.current.value;
-        hadleForgetPassword(email)
-        .then(() => {
-            alert('mail sent')
-        })
-        .catch(err => console.log('Error', err))
-    }
+
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-blue-800 to-blue-500 flex items-center justify-center relative">
@@ -83,9 +76,6 @@ const Login = () => {
                         />
 
                     </div>
-
-
-
                     {/* Password Input */}
                     <div className="relative">
                         <label className="text-gray-300 text-sm bg-transparent mb-2">
@@ -123,9 +113,9 @@ const Login = () => {
                 <div className="text-center text-gray-300 mt-6">
                     <p>
                         Forgot your password?{" "}
-                        <a onClick={forgetPassword} href="#" className="text-blue-300 hover:text-white">
+                        <Link to="/forget" className="text-blue-300 hover:text-white">
                             Reset here
-                        </a>
+                        </Link>
                     </p>
                     <p className="mt-2">
                         Don’t have an account?{" "}

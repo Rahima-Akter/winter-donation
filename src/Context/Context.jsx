@@ -1,25 +1,27 @@
 import { createContext, useEffect, useState } from "react";
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from "../firebase/firebase.config"
-import { useLocation, useNavigate } from "react-router-dom";
 
 
 export const authContext = createContext()
 
 const Context = ({ children }) => {
-
+    const [loading, setLoading] = useState(true)
     const [user, setUser] = useState(null)
     
 
     const handleRegister = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const logIn = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     const logOut = () => {
+        setLoading(false)
         signOut(auth)
     }
 
@@ -40,6 +42,7 @@ const Context = ({ children }) => {
     const handleGoogleLogin = () => {
         return signInWithPopup(auth, googleProvider)
             .then((result) => {
+                setLoading(true)
                 setUser(result.user);  // user info
                 return result.user; // Optionally return user data
             })
@@ -53,8 +56,10 @@ const Context = ({ children }) => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             if(currentUser){
                 setUser(currentUser)
+                setLoading(false)
             } else {
                 setUser(null)
+                setLoading(false)
             }
         });
 
@@ -72,6 +77,7 @@ const Context = ({ children }) => {
         logOut,
         manageProfile,
         hadleForgetPassword,
+        loading,
         user,
         setUser
     }

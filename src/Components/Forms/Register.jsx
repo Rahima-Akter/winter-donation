@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { authContext } from "../../Context/Context";
 
 const Register = () => {
-    const { handleGoogleLogin, handleRegister, user, setUser, manageProfile } = useContext(authContext)
+    const { handleGoogleLogin, handleRegister, setLoading, setUser, manageProfile } = useContext(authContext)
     const [show, setShow] = useState(false)
     const [error, setError] = useState('')
 
@@ -37,6 +37,7 @@ const Register = () => {
 
         handleRegister(email, password)
             .then(result => {
+                setLoading(true)
                 manageProfile(name, photoUrl)
                 setUser(result.user)
             })

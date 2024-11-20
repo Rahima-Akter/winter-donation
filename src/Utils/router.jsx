@@ -9,6 +9,7 @@ import ErrorPage from "../Pages/ErrorPage";
 import Login from "../Components/Forms/Login";
 import Register from "../Components/Forms/Register";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import ForgetPasswordForm from "../Components/Forms/ForgetPasswordForm";
 
 
 const router = createBrowserRouter([
@@ -36,7 +37,9 @@ const router = createBrowserRouter([
             },
             {
                 path: '/dashboard',
-                element: <Dashboard></Dashboard>
+                element: <PrivateRoute>
+                    <Dashboard></Dashboard>
+                </PrivateRoute>
             },
             {
                 path: '/details/:id',
@@ -52,6 +55,10 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/forget',
+                element: <ForgetPasswordForm></ForgetPasswordForm>,
             }
         ]
     }
