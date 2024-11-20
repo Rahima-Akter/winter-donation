@@ -8,6 +8,7 @@ import DonationDetails from "../Components/DonationDetails";
 import ErrorPage from "../Pages/ErrorPage";
 import Login from "../Components/Forms/Login";
 import Register from "../Components/Forms/Register";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -39,7 +40,9 @@ const router = createBrowserRouter([
             },
             {
                 path: '/details/:id',
-                element: <DonationDetails></DonationDetails>,
+                element: <PrivateRoute>
+                    <DonationDetails></DonationDetails>
+                </PrivateRoute>,
                 loader: () => fetch('../../public/donations.json')
             },
             {

@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Snowfall from "react-snowfall"; // Snowfall animation package
 import { FaEye, FaEyeSlash, FaGoogle, FaSnowflake } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { authContext } from "../../Context/Context";
 
 const Register = () => {
+    const { handleGoogleLogin, handleRegister, user, setUser, manageProfile } = useContext(authContext)
     const [show, setShow] = useState(false)
+    const [error, setError] = useState('')
 
     const handleShowHide = () => {
         setShow(!show)
@@ -12,12 +15,34 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        
+
         const name = e.target.name.value;
         const email = e.target.email.value;
         const photoUrl = e.target.photoUrl.value;
         const password = e.target.password.value;
-        console.log(name, photoUrl, email, password)
+        // console.log(name, photoUrl, email, password)
+
+        if (!/[a-z]/.test(password)) {
+            setError('password must contain at least one lowercase letter')
+            return;
+        }
+        if (!/[A-Z]/.test(password)) {
+            setError('password must contain at least one uppercase letter')
+            return;
+        }
+        if (password.length < 6) {
+            setError('password must be at least 6 characters or longer')
+            return;
+        }
+
+        handleRegister(email, password)
+            .then(result => {
+                manageProfile(name, photoUrl)
+                setUser(result.user)
+            })
+            .catch = (err) => {
+                console.log("this is an error", err)
+            }
     }
 
     return (
@@ -109,6 +134,9 @@ const Register = () => {
                             }
                         </div>
                     </div>
+                    {
+                        error && <p className="text-white font-bold text-sm">{error}</p>
+                    }
 
                     {/* Submit Button */}
                     <button
@@ -118,7 +146,7 @@ const Register = () => {
                         Register
                     </button>
                     <div className="divider text-gray-300">OR</div>
-                    <button className="btn bg-white hover:bg-transparent py-2 w-full text-lg hover:text-white text-black  duration-1000"><FaGoogle /><span className="mt-1">Register in with Google</span></button>
+                    <button onClick={handleGoogleLogin} className="btn bg-white hover:bg-transparent py-2 w-full text-lg hover:text-white text-black  duration-1000"><FaGoogle /><span className="mt-1">Register in with Google</span></button>
                 </form>
 
                 {/* Additional Options */}

@@ -1,21 +1,32 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Snowfall from "react-snowfall"; // Snowfall animation package
 import { FaEye, FaEyeSlash, FaGoogle, FaSnowflake } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { authContext } from "../../Context/Context";
 
 const Login = () => {
+    const { handleGoogleLogin, logIn, setUser} = useContext(authContext)
     const [show, setShow] = useState(false)
-
+    const location = useLocation()
+    const navigate = useNavigate()
     const handleShowHide = () => {
         setShow(!show)
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        
-        const name = e.target.email.value;
+
+        const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(name, password)
+        // console.log(name, password)
+        logIn(email, password)
+        .then(res => {
+            setUser(res.user)
+            navigate(location.state.from)
+        })
+        .catch(err => {
+            console.log('Error', err)
+        })
     }
 
     return (
@@ -91,7 +102,7 @@ const Login = () => {
                         Log In
                     </button>
                     <div className="divider text-gray-300">OR</div>
-                    <button className="btn bg-white hover:bg-transparent py-2 w-full text-lg hover:text-white text-black  duration-1000"><FaGoogle/><span className="mt-1">Sign in with Google</span></button>
+                    <button onClick={handleGoogleLogin} className="btn bg-white hover:bg-transparent py-2 w-full text-lg hover:text-white text-black  duration-1000"><FaGoogle /><span className="mt-1">Sign in with Google</span></button>
                 </form>
 
                 {/* Additional Options */}
