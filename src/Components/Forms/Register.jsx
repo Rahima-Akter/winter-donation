@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Snowfall from "react-snowfall"; // Snowfall animation package
-import { FaEye, FaEyeSlash, FaSnowflake } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle, FaSnowflake } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Register = () => {
@@ -12,7 +12,12 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        alert('working')
+        
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const photoUrl = e.target.photoUrl.value;
+        const password = e.target.password.value;
+        console.log(name, photoUrl, email, password)
     }
 
     return (
@@ -48,6 +53,7 @@ const Register = () => {
                         </label>
                         <input
                             type="text"
+                            name="name"
                             placeholder="Enter your name"
                             className="w-full bg-transparent border border-white rounded-lg p-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
                             required
@@ -60,6 +66,7 @@ const Register = () => {
                         </label>
                         <input
                             type="text"
+                            name="photoUrl"
                             placeholder="Enter your name"
                             className="w-full bg-transparent border border-white rounded-lg p-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
                             required
@@ -73,6 +80,7 @@ const Register = () => {
                         </label>
                         <input
                             type="email"
+                            name="email"
                             placeholder="Enter your email"
                             className="w-full bg-transparent border border-white rounded-lg p-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
                             required
@@ -87,7 +95,7 @@ const Register = () => {
                         </label>
                         <input
                             type={show ? "text" : "password"}
-                            id="password"
+                            name="password"
                             placeholder="Enter your password"
                             className="w-full bg-transparent border border-white rounded-lg p-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
                             required
@@ -105,10 +113,12 @@ const Register = () => {
                     {/* Submit Button */}
                     <button
                         type="submit"
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
+                        className="w-full btn bg-transparent text-gray-300 hover:text-black font-bold py-3 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
                     >
                         Register
                     </button>
+                    <div className="divider text-gray-300">OR</div>
+                    <button className="btn bg-white hover:bg-transparent py-2 w-full text-lg hover:text-white text-black  duration-1000"><FaGoogle /><span className="mt-1">Register in with Google</span></button>
                 </form>
 
                 {/* Additional Options */}

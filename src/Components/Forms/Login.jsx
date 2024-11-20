@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Snowfall from "react-snowfall"; // Snowfall animation package
-import { FaEye, FaEyeSlash, FaSnowflake } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle, FaSnowflake } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Login = () => {
@@ -12,7 +12,10 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        alert('working')
+        
+        const name = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(name, password)
     }
 
     return (
@@ -28,7 +31,7 @@ const Login = () => {
                     <FaSnowflake size={200} />
                 </div>
                 <div className="absolute bottom-[-50px] right-[-50px] text-blue-300 opacity-30 animate-spin-reverse">
-                    <FaSnowflake size={120} />
+                    <FaSnowflake color="blue" size={120} />
                 </div>
 
                 {/* Form Header */}
@@ -48,7 +51,7 @@ const Login = () => {
                         </label>
                         <input
                             type="email"
-                            id="email"
+                            name="email"
                             placeholder="Enter your email"
                             className="w-full bg-transparent border border-white rounded-lg p-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
                             required
@@ -64,8 +67,8 @@ const Login = () => {
                             Password
                         </label>
                         <input
-                            type= {show? "text" : "password"}
-                            id="password"
+                            type={show ? "text" : "password"}
+                            name="password"
                             placeholder="Enter your password"
                             className="w-full bg-transparent border border-white rounded-lg p-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
                             required
@@ -83,10 +86,12 @@ const Login = () => {
                     {/* Submit Button */}
                     <button
                         type="submit"
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
+                        className="w-full btn bg-transparent text-gray-300 hover:text-black font-bold py-3 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
                     >
                         Log In
                     </button>
+                    <div className="divider text-gray-300">OR</div>
+                    <button className="btn bg-white hover:bg-transparent py-2 w-full text-lg hover:text-white text-black  duration-1000"><FaGoogle/><span className="mt-1">Sign in with Google</span></button>
                 </form>
 
                 {/* Additional Options */}
