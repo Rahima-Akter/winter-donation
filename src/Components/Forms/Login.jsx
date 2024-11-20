@@ -1,14 +1,17 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import Snowfall from "react-snowfall"; // Snowfall animation package
 import { FaEye, FaEyeSlash, FaGoogle, FaSnowflake } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../../Context/Context";
 
 const Login = () => {
-    const { handleGoogleLogin, logIn, setUser} = useContext(authContext)
+    const { handleGoogleLogin, logIn, setUser, hadleForgetPassword} = useContext(authContext)
+    const emailRef = useRef()
     const [show, setShow] = useState(false)
     const location = useLocation()
     const navigate = useNavigate()
+
+
     const handleShowHide = () => {
         setShow(!show)
     }
@@ -27,6 +30,16 @@ const Login = () => {
         .catch(err => {
             console.log('Error', err)
         })
+    }
+
+    // forget password
+    const forgetPassword = () => {
+        const email = emailRef.current.value;
+        hadleForgetPassword(email)
+        .then(() => {
+            alert('mail sent')
+        })
+        .catch(err => console.log('Error', err))
     }
 
     return (
@@ -62,6 +75,7 @@ const Login = () => {
                         </label>
                         <input
                             type="email"
+                            ref={emailRef}
                             name="email"
                             placeholder="Enter your email"
                             className="w-full bg-transparent border border-white rounded-lg p-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
@@ -109,7 +123,7 @@ const Login = () => {
                 <div className="text-center text-gray-300 mt-6">
                     <p>
                         Forgot your password?{" "}
-                        <a href="#" className="text-blue-300 hover:text-white">
+                        <a onClick={forgetPassword} href="#" className="text-blue-300 hover:text-white">
                             Reset here
                         </a>
                     </p>

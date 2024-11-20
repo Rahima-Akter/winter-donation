@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from "../firebase/firebase.config"
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -27,6 +27,12 @@ const Context = ({ children }) => {
         updateProfile(auth.currentUser, {
             displayName: name, photoURL: image
         })
+    }
+
+    // forget password
+
+    const hadleForgetPassword = (email) => {
+        return sendPasswordResetEmail(auth, email)
     }
 
     // google Login
@@ -65,6 +71,7 @@ const Context = ({ children }) => {
         logIn,
         logOut,
         manageProfile,
+        hadleForgetPassword,
         user,
         setUser
     }
