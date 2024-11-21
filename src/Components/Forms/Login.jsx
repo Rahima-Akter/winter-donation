@@ -5,11 +5,12 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../../Context/Context";
 
 const Login = () => {
-    const { handleGoogleLogin, logIn, setUser, setLoading } = useContext(authContext)
+    const { handleGoogleLogin, logIn,user, setUser, setLoading } = useContext(authContext)
     const emailRef = useRef()
     const [show, setShow] = useState(false)
     const location = useLocation()
     const navigate = useNavigate()
+    const [error, setError] = useState('')
 
 
     const handleShowHide = () => {
@@ -22,6 +23,7 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         // console.log(name, password)
+
         logIn(email, password)
             .then(res => {
                 navigate(location.state.from)
@@ -29,7 +31,7 @@ const Login = () => {
                 setLoading(true)
             })
             .catch(err => {
-                console.log('Error', err)
+                setError(err.message.split('/')[1].slice(0,18))
             })
     }
 
@@ -97,6 +99,11 @@ const Login = () => {
                             }
                         </div>
                     </div>
+
+                    {/* error msg */}
+                    {
+                        error && <p className="text-white text-sm">{error}</p>
+                    }
 
                     {/* Submit Button */}
                     <button

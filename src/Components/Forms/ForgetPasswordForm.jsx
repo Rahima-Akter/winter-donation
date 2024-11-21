@@ -3,6 +3,7 @@ import { FaSnowflake } from 'react-icons/fa';
 import Snowfall from 'react-snowfall';
 import { authContext } from '../../Context/Context';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const ForgetPasswordForm = () => {
     const { hadleForgetPassword } = useContext(authContext)
@@ -15,7 +16,7 @@ const ForgetPasswordForm = () => {
         console.log(email)
         hadleForgetPassword(email)
             .then(() => {
-                alert('email sent check your mail')
+                toast('A mail is sent to you to change your password')
                 emailRef.current.value = '';
             })
             .catch(err => console.log('Error', err))

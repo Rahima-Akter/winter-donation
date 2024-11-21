@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import Snowfall from "react-snowfall"; // Snowfall animation package
+import Snowfall from "react-snowfall"; 
 import { FaEye, FaEyeSlash, FaGoogle, FaSnowflake } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../../Context/Context";

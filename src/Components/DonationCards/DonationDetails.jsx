@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Snowfall from "react-snowfall";
 
@@ -26,7 +26,7 @@ const DonationDetails = () => {
     // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        toast.success("Thank you! We will reach your destination soon 💟", {
+        toast.success("Thank you for your contribution! We will reach your destination soon 💟", {
             position: "top-center",
         });
 
@@ -147,9 +147,6 @@ const DonationDetails = () => {
                     </form>
                 </div>
             </div>
-
-            {/* Toast Notifications */}
-            <ToastContainer />
         </div>
     );
 };

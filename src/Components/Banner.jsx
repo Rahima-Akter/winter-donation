@@ -45,7 +45,7 @@ const Banner = () => {
                             }}
                         >
                             {/* Darker overlay for better contrast */}
-                            <div className="absolute inset-0 bg-black opacity-60 flex items-center rounded-md">
+                            <div className="absolute inset-0 bg-black opacity-40 flex items-center rounded-md">
                                 <div className="ml-8 text-white lg:px-20 py-3 lg:pl-[8%] lg:pr-[12%] md:pl-[2%] md:pr-[0%] lg:py-6 lg:w-4/6 w-3/6">
                                     <h2 className="text-3xl lg:text-5xl font-bold mb-4 text-white">
                                         Support Local Communities This Winter

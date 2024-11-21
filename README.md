@@ -1,6 +1,5 @@
 # Project Title
-
-Winter clothing donation
+   - Winter clothing donation
 
 # Purpose
 
@@ -67,4 +66,5 @@ This is a donation platform that allows users to donate items, money, or their t
    - **vite**: A build tool for fast development and optimized builds.
 
 
-## Live Link
+## Live Link:
+    - 
