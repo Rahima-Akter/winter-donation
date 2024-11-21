@@ -7,12 +7,12 @@ const CareAndLoveCards = () => {
             icon: 'https://devsaidul.com/ui/nonpro/assets/images/service/service-icon1.png',
         },
         {
-            title: "Become & Volunteer",
+            title: "Become a Volunteer",
             description: "Engaging in charitable activities not only benefits those in need.",
             icon: 'https://devsaidul.com/ui/nonpro/assets/images/service/service-icon2.png',
         },
         {
-            title: "Quick Fundraising Water",
+            title: "Quick Fundraising",
             description: "Engaging in charitable activities not only benefits those in need.",
             icon: 'https://devsaidul.com/ui/nonpro/assets/images/service/service-icon3.png',
         },
@@ -20,7 +20,7 @@ const CareAndLoveCards = () => {
 
     return (
         <div className=" bg-[#F5FAF7] flex flex-col items-center justify-center px-6 py-16 -mt-5">
-            <h2 className="lg:text-2xl md:text-sm text-xs font-bold text-[#454545] text-center mb-2">
+            <h2 className="lg:text-sm text-xs font-bold text-[#454545] text-center mb-2">
                 ❤️ Raising Your Helping Hands ❤️
             </h2>
             <h3 className="text-2xl md:text-4xl font-bold text-[#454545] text-center mb-10">

@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
-import DonationCards from "../Components/DonationCards";
+import DonationCards from "../Components/DonationCards/DonationCards";
+import UpcomingEvents from "../Components/DonationCards/UpcomingEvents";
 
 const DonationCampaigns = () => {
     const data = useLoaderData();  // Load data from the loader
@@ -17,6 +18,9 @@ const DonationCampaigns = () => {
                     <DonationCards donation={donation} key={donation.id} />
                 ))}
             </div>
+            {/* upcoming events */}
+
+            <UpcomingEvents></UpcomingEvents>
         </div>
     );
 };

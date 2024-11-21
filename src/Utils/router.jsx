@@ -2,15 +2,17 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../MainLayout/MainLayout";
 import Home from "../Pages/Home";
 import DonationCampaigns from "../Pages/DonationCampaigns";
-import HowToHelp from "../Pages/HowToHelp";
+import HowToHelp from "../Pages/HowToHelp/HowToHelp";
 import Dashboard from "../Pages/Dashboard";
-import DonationDetails from "../Components/DonationDetails";
+import DonationDetails from "../Components/DonationCards/DonationDetails";
 import ErrorPage from "../Pages/ErrorPage";
 import Login from "../Components/Forms/Login";
 import Register from "../Components/Forms/Register";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import ForgetPasswordForm from "../Components/Forms/ForgetPasswordForm";
 import ProfileUpdate from "../Components/ProfileUpdate";
+import 'animate.css';
+
 
 
 const router = createBrowserRouter([

@@ -1,14 +1,14 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react'; // Importing Swiper components
-import 'swiper/css';  // Import core styles for swiper
-import 'swiper/css/navigation';  // Import styles for navigation (arrows)
-import 'swiper/css/pagination';  // Import styles for pagination (dots)
-import {  } from 'swiper';  // Import the necessary modules
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { } from 'swiper';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { FaArrowRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
-// Winter-themed images (replace with actual images or URLs)
+// banner bg images
 const winterImages = [
     'https://img.freepik.com/premium-photo/photo-portrait-group-poor-children-sit-ground_763111-216001.jpg',
     'https://img.freepik.com/premium-photo/world-humanitarian-day-helping-hand-those-affected-by-war-famine-social-problem-camp-refugees-agust-19-need-protection-food-homes-search-better-life-generative-ai_771426-10990.jpg',
@@ -32,7 +32,7 @@ const Banner = () => {
                 pagination={{
                     clickable: true,
                 }}
-                modules={[Autoplay,  Pagination]}  // Passing the necessary modules
+                modules={[Autoplay, Pagination]}
                 className="w-full h-full"
             >
                 {/* Map over winterImages to generate slides */}
@@ -58,7 +58,7 @@ const Banner = () => {
                                         onClick={() => navigate("/donation")}
                                         className="bg-[#15C8A0] text-white py-2 px-6 rounded-md hover:bg-[#1b8870] flex gap-2 items-center justify-centerfont-bold"
                                     >
-                                       <FaArrowRight className='text-white'></FaArrowRight> Donate Now
+                                        <FaArrowRight className='text-white'></FaArrowRight> Donate Now
                                     </button>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@ const Banner = () => {
             </Swiper>
 
             {/* Optional: Add a custom label on top of the banner */}
-            
+
         </section>
     );
 };
