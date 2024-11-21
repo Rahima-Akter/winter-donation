@@ -44,14 +44,14 @@ const DonationDetails = () => {
     }
 
     return (
-        <div className="min-h-[calc(100vh-800px)] bg-gradient-to-b from-blue-900 to-white relative overflow-hidden group">
+        <div className="bg-gradient-to-b from-blue-900 to-white relative overflow-hidden group">
             {/* Snowfall effect */}
             <Snowfall color="yellow" snowflakeCount={200} />
 
-            <div className="lg:grid lg:grid-cols-2 lg:gap-0 p-8 max-w-7xl mx-auto relative z-10">
+            <div className="flex lg:flex-row flex-col lg:gap-0 p-8 lg:w-9/12 md:w-11/12 mx-auto relative z-10">
 
                 {/* Image Section (Left) */}
-                <div className="relative flex items-center justify-center overflow-hidden">
+                <div className="relative flex items-center justify-center overflow-hidden lg:order-1 order-2 lg:w-[50%]">
                     <Snowfall color="white" snowflakeCount={40} />
                     <img
                         src={donation.image}
@@ -62,13 +62,13 @@ const DonationDetails = () => {
 
                 {/* Form Section (Right) */}
                 {/* <div className="relative bg-white bg-opacity-20 backdrop-blur-xl rounded-tr-xl rounded-br-xl p-8 shadow-2xl flex flex-col justify-between h-full"> */}
-                <div className="relative glass rounded-tr-xl rounded-br-xl p-8 shadow-2xl flex flex-col justify-between h-full">
+                <div className="relative glass rounded-tr-xl rounded-br-xl p-8 shadow-2xl flex flex-col justify-between h-full lg:order-2 order-1 lg:w-[50%]">
                     <Snowfall color="gold" snowflakeCount={20} />
-                    <h2 className="text-3xl font-bold text-center text-white mb-6">
+                    <h2 className="md:text-3xl text-xl font-bold text-center text-white mb-6">
                         Donate to {donation.title}
                     </h2>
 
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <form onSubmit={handleSubmit} className="space-y-3">
                         {/* Quantity */}
                         <div>
                             <label htmlFor="quantity" className="block text-lg font-medium text-white mb-2">

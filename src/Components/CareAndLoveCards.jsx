@@ -20,10 +20,10 @@ const CareAndLoveCards = () => {
 
     return (
         <div className=" bg-[#F5FAF7] flex flex-col items-center justify-center px-6 py-16 -mt-5">
-            <h2 className="text-2xl md:text-sm font-bold text-[#454545] text-center mb-2">
+            <h2 className="lg:text-2xl md:text-sm text-xs font-bold text-[#454545] text-center mb-2">
                 ❤️ Raising Your Helping Hands ❤️
             </h2>
-            <h3 className="text-xl md:text-4xl font-bold text-[#454545] text-center mb-10">
+            <h3 className="text-2xl md:text-4xl font-bold text-[#454545] text-center mb-10">
                 We Provide Care & Love
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -21,7 +21,7 @@ const HowItWorks = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-blue-900 to-white text-gray-800 relative overflow-hidden pb-24 pt-10 z-10 bg-image">
+        <div className="bg-gradient-to-b from-blue-900 to-white text-gray-800 relative overflow-hidden pb-12 md:pb-24 md:pt-10 z-10 bg-image">
             {/* Snowfall */}
             <Snowfall snowflakeCount={80} color="white" />
 
@@ -30,11 +30,11 @@ const HowItWorks = () => {
 
             {/* Header */}
             <h2 className="text-4xl font-bold text-center text-white py-10 drop-shadow-lg">
-                🎄 How We Work 🎄
+                 How It Works 
             </h2>
 
             {/* Donation Section */}
-            <div className="relative mx-auto max-w-6xl bg-white rounded-lg shadow-lg border-4 border-dashed border-green-400 overflow-hidden">
+            <div className="relative mx-auto w-[87%] bg-white bg-opacity-80 rounded-lg shadow-lg border-4 border-dashed border-green-400 overflow-hidden">
                 <div className="absolute -top-5 left-5 animate-pulse">
                     <FaGift size={40} className="text-red-500" />
                 </div>
@@ -45,13 +45,13 @@ const HowItWorks = () => {
                     <FaStar size={40} className="text-yellow-400" />
                 </div>
                 <div className="p-8">
-                    <h3 className="text-3xl font-bold text-red-600 text-center shimmer">
-                        🎁 Donate Today & Spread Christmas Cheer! 🎁
+                    <h3 className="text-xl md:text-3xl font-bold text-red-600 text-center shimmer">
+                        🎁 Donate Today & Spread Warmth This Winter! 🎁
                     </h3>
                     <p className="text-lg text-center text-gray-700 mt-4">
-                        <strong>How to Donate:</strong> Find your nearest collection point,
+                        <strong>How to Donate:</strong> Find your nearest collection point (Bkash, Nagad, Rocket, etc) for money donation or fill out a form and we'll come and pick it up for you
                         and bring joy to those in need. Your small help can bring a big
-                        difference!
+                        difference! ❤❤
                     </p>
                 </div>
                 {/* Hover Effect */}
@@ -59,70 +59,37 @@ const HowItWorks = () => {
             </div>
 
             {/* Cards Section */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 md:px-20 mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 gap-5 lg:px-6 px-0 w-[87%] mx-auto lg:mt-16 mt-10">
                 {data
                     .find((item) => item.type === "collectionPoints")
                     ?.content.map((point, index) => (
-                        <div
-                            key={index}
-                            className="relative bg-white p-6 rounded-lg shadow-lg card-christmas group overflow-hidden"
-                        >
-                            {/* Decorations */}
-                            <div className="absolute top-2 right-2 winter-cap animate-bounce z-10" />
-                            <div className="garlands" />
-                            <div className="ornaments" />
-                            <div className="sparkling-lights" />
-
-
-                            
-                            {/* <div
-                                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 transform -translate-x-full group-hover:translate-x-0"
-                                style={{
-                                    backgroundImage: `url(${item.images})`,
-                                }}
-                            ></div>
-
-                            
-                            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div> */}
+                        <div key={index} className="relative bg-white bg-opacity-20 backdrop-blur-md border border-white text-white p-6 rounded-lg shadow-lg card-christmas group overflow-hidden w-full group">
 
                             {/* Card Content */}
-                            <h4 className="text-lg font-bold text-red-700 mb-2 card-title hover:text-green-600 transition-all duration-300">
+                            <h4 className="text-lg font-bold text-white mb-2 card-title group-hover:text-[#9ae7f1] group-hover:text-xl transition-all duration-1000 cursor-pointer">
                                 {point.name}
                             </h4>
-                            <p className="text-gray-700">
+                            <p className="opacity-70 group-hover:opacity-100 duration-1000">
                                 <strong>Address:</strong> {point.address}
                             </p>
-                            <p className="text-gray-700">
+                            <p className="opacity-70 group-hover:opacity-100 duration-1000">
                                 <strong>Contact:</strong> {point.contact}
                             </p>
 
-                            {/* Background image transition on hover */}
-                            {/* <div
-                                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 transform -translate-x-full group-hover:translate-x-0"
-                                style={{
-                                    backgroundImage: `url(${getBackgroundImage(point.name)})`,
-                                }}
-                            ></div> */}
-                            <div
-                                className="bg-cover bg-center absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500"
-                                style={{
-                                    backgroundImage: `url(${getBackgroundImage(point.name)})`,
-                                }}
-                            ></div>
                         </div>
                     ))}
             </div>
 
             {/* Supported Divisions Section */}
-            <div className="mt-16 px-6 md:px-20 text-center">
-                <h3 className="text-3xl font-bold text-white mb-6">Supported Divisions</h3>
+            <div className="md:mt-8 px-6 md:px-8 text-center">
+                <h3 className="text-4xl font-bold text-center text-white py-6 drop-shadow-lg">Supported Divisions</h3>
                 <div className="flex flex-wrap justify-center gap-4">
                     {data
                         .find((item) => item.type === "supportedDivisions")
                         ?.content.map((division, index) => (
                             <div
                                 key={index}
-                                className="bg-green-600 text-white px-6 py-2 rounded-full shadow-lg text-lg font-medium hover:bg-green-700 hover:scale-105 transform transition-all duration-300 snowflake-hover"
+                                className="bg-white bg-opacity-20 backdrop-blur-md border border-white border-opacity-50 text-white px-6 py-2 rounded-full shadow-lg text-sm md:text-lg font-medium hover:scale-105 transform transition-all duration-1000 snowflake-hover"
                             >
                                 ❄️ {division}
                             </div>

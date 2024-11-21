@@ -19,7 +19,7 @@ const Navbar = () => {
 
     return (
         <nav className="bg-[#273e47] p-4">
-            <div className="max-w-7xl mx-auto flex items-center justify-between">
+            <div className="flex items-center justify-between">
                 {/* Logo (on the right for large screens) */}
                 <div className="hidden lg:flex items-center">
                     <Link to="/">

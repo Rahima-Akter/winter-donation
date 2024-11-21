@@ -36,7 +36,7 @@ const Login = () => {
 
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-blue-800 to-blue-500 flex items-center justify-center relative">
+        <div className="py-12 bg-gradient-to-b from-blue-800 to-blue-500 flex items-center justify-center relative">
             {/* Snowfall Effect */}
             <Snowfall snowflakeCount={150} color="white" style={{ position: "fixed", width: "100vw", height: "100vh", }} />
             <Snowfall snowflakeCount={50} color="yellow" style={{ position: "fixed", width: "100vw", height: "100vh", }} />
