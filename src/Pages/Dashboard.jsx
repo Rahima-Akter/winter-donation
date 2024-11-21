@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import { authContext } from "../Context/Context";
 import { FaUser } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
     const { user } = useContext(authContext)
+    const navigate = useNavigate()
     return (
         <div className="min-h-screen bg-gradient-to-b from-blue-800 to-blue-500 flex items-center justify-center relative">
             {/* Snowfall Background */}
@@ -44,7 +46,7 @@ const Dashboard = () => {
                 {/* Update Profile Button */}
                 <div className="mt-8 text-center">
                     <button
-                        onClick={() => (window.location.href = "/update-profile")}
+                        onClick={() => navigate("/profile")}
                         className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
                     >
                         Update Profile

@@ -37,20 +37,27 @@ const Navbar = () => {
 
                 {/* User Profile or Login Button for large screens */}
                 <div className="hidden lg:flex items-center space-x-4">
-                    {user ? (<div className='flex gap-1 items-center'>
-                        <Link onClick={logOut} className="text-white text-xs btn btn-sm bg-[#15C8A0] rounded hover:bg-[#1b8870] font-bold">
-                            LogOut
-                        </Link>
-                        <Link to="/profile">
-                            <img
-                                src={user?.photoURL || <FaUser/>}
-                                alt="User Profile"
-                                className="h-10 w-10 rounded-full"
-                            />
-                        </Link>
-                    </div>
+                    {user ? (
+                        <div className='flex gap-1 items-center'>
+                            <Link
+                                onClick={logOut}
+                                className="text-white text-xs btn btn-sm bg-[#15C8A0] rounded hover:bg-[#1b8870] font-bold"
+                            >
+                                LogOut
+                            </Link>
+                            <Link to="/profile">
+                                <img
+                                    src={user?.photoURL || "https://i.pinimg.com/564x/a4/8a/ca/a48aca275e3dbe9a00d8f90e095f25ae.jpg"} // fallback image URL for the user avatar
+                                    alt="User Profile"
+                                    className="h-10 w-10 rounded-full"
+                                />
+                            </Link>
+                        </div>
                     ) : (
-                        <Link to="/login" className="text-white py-2 px-4 bg-[#15C8A0] rounded hover:bg-[#1b8870] font-bold">
+                        <Link
+                            to="/login"
+                            className="text-white py-2 px-4 bg-[#15C8A0] rounded hover:bg-[#1b8870] font-bold"
+                        >
                             Login
                         </Link>
                     )}

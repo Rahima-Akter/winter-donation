@@ -8,7 +8,7 @@ export const authContext = createContext()
 const Context = ({ children }) => {
     const [loading, setLoading] = useState(true)
     const [user, setUser] = useState(null)
-    
+
 
     const handleRegister = (email, password) => {
         setLoading(true)
@@ -26,8 +26,12 @@ const Context = ({ children }) => {
     }
 
     const manageProfile = (name, image) => {
-        updateProfile(auth.currentUser, {
+        return updateProfile(auth.currentUser, {
             displayName: name, photoURL: image
+        })
+        .then(() => {
+            const updatedProfile = auth.currentUser;
+            setUser(updatedProfile)
         })
     }
 
@@ -40,27 +44,19 @@ const Context = ({ children }) => {
     // google Login
     const googleProvider = new GoogleAuthProvider();
     const handleGoogleLogin = () => {
-        return signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                setLoading(true)
-                setUser(result.user);  // user info
-                return result.user; // Optionally return user data
-            })
-            .catch((error) => {
-                console.error("Error during Google login: ", error);
-            });
+       return signInWithPopup(auth, googleProvider)
     };
-    
+
     // observer
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            if(currentUser){
+            if (currentUser) {
                 setUser(currentUser)
                 setLoading(false)
             } else {
                 setUser(null)
-                setLoading(false)
             }
+            setLoading(false)
         });
 
         return () => {

@@ -10,6 +10,7 @@ import Login from "../Components/Forms/Login";
 import Register from "../Components/Forms/Register";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import ForgetPasswordForm from "../Components/Forms/ForgetPasswordForm";
+import ProfileUpdate from "../Components/ProfileUpdate";
 
 
 const router = createBrowserRouter([
@@ -59,6 +60,12 @@ const router = createBrowserRouter([
             {
                 path: '/forget',
                 element: <ForgetPasswordForm></ForgetPasswordForm>,
+            },
+            {
+                path: '/profile',
+                element: <PrivateRoute>
+                    <ProfileUpdate></ProfileUpdate>
+                </PrivateRoute>
             }
         ]
     }

@@ -1,13 +1,14 @@
 import React, { useContext, useState } from "react";
 import Snowfall from "react-snowfall"; // Snowfall animation package
 import { FaEye, FaEyeSlash, FaGoogle, FaSnowflake } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../../Context/Context";
 
 const Register = () => {
     const { handleGoogleLogin, handleRegister, setLoading, setUser, manageProfile } = useContext(authContext)
     const [show, setShow] = useState(false)
     const [error, setError] = useState('')
+    const navigate = useNavigate()
 
     const handleShowHide = () => {
         setShow(!show)
@@ -44,6 +45,20 @@ const Register = () => {
             .catch = (err) => {
                 console.log("this is an error", err)
             }
+    }
+
+    const googleLogin = () => {
+        handleGoogleLogin()
+            .then((result) => {
+                console.log('goole loing success')
+                navigate('/')
+                setLoading(true)
+                setUser(result.user);  // user info
+                return result.user; // Optionally return user data
+            })
+            .catch((error) => {
+                console.error("Error during Google login: ", error);
+            });
     }
 
     return (
@@ -142,12 +157,13 @@ const Register = () => {
                     {/* Submit Button */}
                     <button
                         type="submit"
+                        onClick={() => navigate('/')}
                         className="w-full btn bg-transparent text-gray-300 hover:text-black font-bold py-3 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
                     >
                         Register
                     </button>
                     <div className="divider text-gray-300">OR</div>
-                    <button onClick={handleGoogleLogin} className="btn bg-white hover:bg-transparent py-2 w-full text-lg hover:text-white text-black  duration-1000"><FaGoogle /><span className="mt-1">Register in with Google</span></button>
+                    <button onClick={googleLogin} className="btn bg-white hover:bg-transparent py-2 w-full text-lg hover:text-white text-black  duration-1000"><FaGoogle /><span className="mt-1">Register in with Google</span></button>
                 </form>
 
                 {/* Additional Options */}
