@@ -100,7 +100,7 @@ const Footer = () => {
                 </div>
 
                 {/* Footer Bottom */}
-                <div className="mt-12 border-t border-teal-500 pt-4 text-center">
+                <div className="mt-12 border-t border-teal-500 py-4 text-center">
                     <p className="text-sm mt-2 mb-7">
                         Copyright © <span className="text-teal-500">WarmHeartsFoundation</span>. All Rights Reserved.
                     </p>

@@ -6,27 +6,27 @@ const BannerCards = () => {
         {
             title: "Education For Citizens",
             description: "Providing education for all citizens.",
-            icon: <FaBook className="text-4xl text-yellow-400" />, // React Icon for Education
-            bgImage: "https://thecsrjournal.in/wp-content/uploads/2018/05/Changing-the-Lives-of-Underprivileged-Children-The-CSR-Journal.jpg", // Background image path
-          },
-          {
+            icon: <FaBook className="text-4xl text-yellow-400" />,
+            bgImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiRfpIJWCZq50YDkxiCNEqXMwwYWSV4oVf-g&s",
+        },
+        {
             title: "Free Refuge Shelter",
             description: "Offering safe shelter for those in need.",
-            icon: <FaHome className="text-4xl text-yellow-400" />, // React Icon for Shelter
-            bgImage: "https://thecsrjournal.in/wp-content/uploads/2018/05/Changing-the-Lives-of-Underprivileged-Children-The-CSR-Journal.jpg", // Background image path
-          },
-          {
+            icon: <FaHome className="text-4xl text-yellow-400" />,
+            bgImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIBa5RetVQgcZi2mK57VG66KM2aXVWh0vXzHk1glnvxmkPO3spTLlqMD9TwLkpdAO4EVk&usqp=CAU",
+        },
+        {
             title: "Medical & Blood",
             description: "Providing medical care and blood donation services.",
-            icon: <FaHeartbeat className="text-4xl text-yellow-400" />, // React Icon for Medical
-            bgImage: "https://thecsrjournal.in/wp-content/uploads/2018/05/Changing-the-Lives-of-Underprivileged-Children-The-CSR-Journal.jpg", // Background image path
-          },
-          {
+            icon: <FaHeartbeat className="text-4xl text-yellow-400" />,
+            bgImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjC2GwFqwoW6Gbe80cFfid0itdI1-hE-7jnvqp7ytPS0z9LIsYqGEc9uYh_OjD9ya-dwc&usqp=CAU",
+        },
+        {
             title: "Donate For Health",
             description: "Support health initiatives through donations.",
-            icon: <FaDonate className="text-4xl text-yellow-400" />, // React Icon for Donations
-            bgImage: "https://thecsrjournal.in/wp-content/uploads/2018/05/Changing-the-Lives-of-Underprivileged-Children-The-CSR-Journal.jpg", // Background image path
-          },
+            icon: <FaDonate className="text-4xl text-yellow-400" />,
+            bgImage: "https://thecsrjournal.in/wp-content/uploads/2018/05/Changing-the-Lives-of-Underprivileged-Children-The-CSR-Journal.jpg",
+        },
     ];
 
     return (

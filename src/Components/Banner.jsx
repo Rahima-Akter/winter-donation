@@ -55,7 +55,7 @@ const Banner = () => {
                                 <h2 className="text-3xl lg:text-5xl font-bold mb-4">
                                     Support Local Communities This Winter
                                 </h2>
-                                <p className="lg:text-lg mb-6 lg:pr-[8%] md:pr-[22%]">
+                                <p className="lg:text-lg mb-6 lg:pr-[8%] md:pr-[22%] pr-8">
                                     Join our donation campaign to provide warmth and support to those in need. Together, we can make a difference.
                                 </p>
                                 <button
