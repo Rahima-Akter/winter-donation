@@ -51,7 +51,7 @@ const DonationDetails = () => {
             <div className="flex lg:flex-row flex-col lg:gap-0 p-8 lg:w-9/12 md:w-11/12 mx-auto relative z-10">
 
                 {/* Image Section (Left) */}
-                <div className="relative flex items-center justify-center overflow-hidden lg:order-1 order-2 lg:w-[50%]">
+                <div className="relative flex items-center justify-center overflow-hidden lg:order-1 order-2 lg:w-[50%] animate__animated animate__slideInLeft">
                     <Snowfall color="white" snowflakeCount={40} />
                     <img
                         src={donation.image}
@@ -62,7 +62,7 @@ const DonationDetails = () => {
 
                 {/* Form Section (Right) */}
                 {/* <div className="relative bg-white bg-opacity-20 backdrop-blur-xl rounded-tr-xl rounded-br-xl p-8 shadow-2xl flex flex-col justify-between h-full"> */}
-                <div className="relative glass rounded-tr-xl rounded-br-xl p-8 shadow-2xl flex flex-col justify-between h-full lg:order-2 order-1 lg:w-[50%]">
+                <div className="relative glass rounded-tr-xl rounded-br-xl p-8 shadow-2xl flex flex-col justify-between h-full lg:order-2 order-1 lg:w-[50%] animate__animated animate__slideInRight">
                     <Snowfall color="gold" snowflakeCount={20} />
                     <h2 className="md:text-3xl text-xl font-bold text-center text-white mb-6">
                         Donate to {donation.title}

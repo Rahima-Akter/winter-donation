@@ -34,7 +34,7 @@ const HowItWorks = () => {
             </h2>
 
             {/* Donation Section */}
-            <div className="relative mx-auto w-[87%] bg-white bg-opacity-80 rounded-lg shadow-lg border-4 border-dashed border-green-400 overflow-hidden">
+            <div className="relative mx-auto w-[87%] bg-white bg-opacity-80 rounded-lg shadow-lg border-4 border-dashed border-green-400 overflow-hidden animate__animated animate__bounceInLeft">
                 <div className="absolute -top-5 left-5 animate-pulse">
                     <FaGift size={40} className="text-red-500" />
                 </div>
@@ -63,7 +63,7 @@ const HowItWorks = () => {
                 {data
                     .find((item) => item.type === "collectionPoints")
                     ?.content.map((point, index) => (
-                        <div key={index} className="relative bg-white bg-opacity-20 backdrop-blur-md border border-white text-white p-6 rounded-lg shadow-lg card-christmas group overflow-hidden w-full group">
+                        <div key={index} className="relative bg-white bg-opacity-20 backdrop-blur-md border border-white text-white p-6 rounded-lg shadow-lg card-christmas group overflow-hidden w-full group animate__animated animate__heartBeat">
 
                             {/* Card Content */}
                             <h4 className="text-lg font-bold text-white mb-2 card-title group-hover:text-[#9ae7f1] group-hover:text-xl transition-all duration-1000 cursor-pointer">
@@ -89,7 +89,7 @@ const HowItWorks = () => {
                         ?.content.map((division, index) => (
                             <div
                                 key={index}
-                                className="bg-white bg-opacity-20 backdrop-blur-md border border-white border-opacity-50 text-white px-6 py-2 rounded-full shadow-lg text-sm md:text-lg font-medium hover:scale-105 transform transition-all duration-1000 snowflake-hover"
+                                className="bg-white bg-opacity-20 backdrop-blur-md border border-white border-opacity-50 text-white px-6 py-2 rounded-full shadow-lg text-sm md:text-lg font-medium hover:scale-105 transform transition-all duration-1000 snowflake-hover  animate__animated animate__shakeX"
                             >
                                 ❄️ {division}
                             </div>

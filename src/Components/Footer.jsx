@@ -19,27 +19,31 @@ const Footer = () => {
 
     return (
         <footer className="bg-gray-900 text-white pt-5">
-            <div className='w-8/12 mx-auto'>
-                <div className="py-16 px-6 flex justify-between items-center">
-                    <div>
-                        <h1 className="text-4xl">Want to give charity, start from here</h1>
-                        <p className="text-sm">we'll take care of it</p>
+            <div className='lg:w-[70%] md:w-[80%] mx-auto'>
+                <div className="py-16 px-6 flex lg:flex-row flex-col justify-between items-center">
+                    <div className="text-left w-full">
+                        <h1 className="lg:text-4xl md:text-2xl text-[22px]">Want to give charity? start from here</h1>
+                        <p className="text-sm md:mt-2">Your one contribution can bring smile on peoples face</p>
                     </div>
-                    <button
-                        onClick={() => navigate("/donation")}
-                        className="bg-white text-black py-2 px-6 rounded-md hover:bg-[#15C8A0] flex gap-2 items-center justify-centerfont-bold"
-                    >
-                        <FaArrowRight className='text-black'></FaArrowRight> Donate Now
-                    </button>
+                    <div className="w-full">
+                        <button
+                            onClick={() => navigate("/donation")}
+                            className="bg-white text-black py-2 px-6 rounded-md hover:bg-[#15C8A0] flex gap-2 items-center justify-centerfont-bold lg:mt-0 mt-5 lg:float-right"
+                        >
+                            <FaArrowRight className='text-black'></FaArrowRight> Donate Now
+                        </button>
+                    </div>
                 </div>
-                <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8">
                     {/* Left Section */}
                     <div className="">
-                        <h3 className="text-xl font-bold mb-4">WarmHearts</h3>
-                        <p className="text-sm mb-4">
-                            People from around the country trusts us and work with us. We also get support from around the world and we work to bring warmth to the people in need.
-                        </p>
-                        <p className="text-sm mb-4">Social Info</p>
+                        <h3 className="text-2xl font-bold mb-2">WarmHearts</h3>
+                        <div className="text-sm">
+                            <p>Address: House 123, Road 10, Gulshan-2, Dhaka</p>
+                            <p>Phone: +88 0123456789</p>
+                            <p>email: <span className='text-red-500 hover:underline'> warmhearts@gmail.com</span></p>
+                        </div>
+                        <p className="text-sm mb-2 mt-3">Social Info</p>
                         <div className="flex space-x-3 text-lg">
                             <FaFacebook className="hover:text-teal-500 transition" />
                             <FaTwitter className="hover:text-teal-500 transition" />
@@ -50,7 +54,8 @@ const Footer = () => {
 
                     {/* Navigation Links */}
                     <div className="">
-                        <h4 className="text-2xl font-bold mb-4">Our Navigation</h4>
+                        <h4 className="text-[20px] font-bold">Our Navigation</h4>
+                        <div className='border border-teal-500 w-[30%] mb-4'></div>
                         <ul>
 
                             {navLinks.map((link, index) => (
@@ -63,7 +68,8 @@ const Footer = () => {
 
                     {/* Services */}
                     <div className="">
-                        <h4 className="text-2xl font-bold mb-4">Our Service</h4>
+                        <h4 className="text-[20px] font-bold">Our Service</h4>
+                        <div className='border border-teal-500 w-[30%] mb-4'></div>
                         <ul>
                             {services.map((service, index) => (
                                 <div key={index} className='flex gap-1 hover:text-teal-500 hover:translate-x-2 transition-transform duration-300'><MdOutlineDoubleArrow className='text-teal-500 mt-[2px]' /><li className="mb-2">
@@ -75,8 +81,9 @@ const Footer = () => {
 
                     {/* Gallery */}
                     <div className="">
-                        <h4 className="text-2xl font-bold mb-4">Our Gallery</h4>
-                        <div className="grid md:grid-cols-3 gap-1 w-64">
+                        <h4 className="text-[20px] font-bold">Our Gallery</h4>
+                        <div className='border border-teal-500 w-[30%] mb-4'></div>
+                        <div className="grid md:grid-cols-3 grid-cols-3 gap-1 md:w-64">
                             {galleryImages.map((image, index) => (
                                 <div key={index} className="relative group w-full h-20 overflow-hidden">
                                     <img
@@ -93,9 +100,9 @@ const Footer = () => {
                 </div>
 
                 {/* Footer Bottom */}
-                <div className="mt-12 border-t border-teal-500 pt-4 text-center mb-2">
-                    <p className="text-sm">
-                        Copyright © <span className="text-teal-500">WarmHearts</span>. All Rights Reserved.
+                <div className="mt-12 border-t border-teal-500 pt-4 text-center">
+                    <p className="text-sm mt-2 mb-7">
+                        Copyright © <span className="text-teal-500">WarmHeartsFoundation</span>. All Rights Reserved.
                     </p>
                 </div>
             </div>

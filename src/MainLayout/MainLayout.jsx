@@ -9,7 +9,9 @@ const MainLayout = () => {
             <div className="flex-grow">
                 <Outlet></Outlet>
             </div>
-            <Footer></Footer>
+            <div className="">
+                <Footer></Footer>
+            </div>
         </div>
     );
 };

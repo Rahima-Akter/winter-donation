@@ -9,7 +9,7 @@ const Dashboard = () => {
     return (
         <div className="py-16 bg-gradient-to-b from-blue-800 to-blue-500 flex items-center justify-center relative">
             {/* Snowfall Background */}
-            <div className="bg-white bg-opacity-20 backdrop-blur-md border border-white border-opacity-30 rounded-lg p-6 md:p-10 lg:py-12 shadow-lg lg:w-7/12 md:w-6/12 w-10/12 mx-auto relative">
+            <div className="bg-white bg-opacity-20 backdrop-blur-md border border-white border-opacity-30 rounded-lg p-6 md:p-10 lg:py-12 shadow-lg lg:w-7/12 md:w-6/12 w-10/12 mx-auto relative animate__animated animate__zoomIn">
                 {/* Welcome Message */}
                 <h1 className="text-center text-white text-4xl font-bold mb-6 lg:block hidden -ml-32">
                     Welcome, {user?.displayName}!

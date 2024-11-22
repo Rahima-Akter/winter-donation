@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FaBars, FaTimes, FaUser } from 'react-icons/fa';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo2.jpg';
 import { authContext } from '../Context/Context';
 
 // const Navbar = ({ user }) => {
@@ -15,16 +15,16 @@ const Navbar = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    console.log('this is user3', user)
 
     return (
         <nav className="bg-[#273e47] p-4">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between px-5">
                 {/* Logo (on the right for large screens) */}
-                <div className="hidden lg:flex items-center">
+                <div className="hidden gap-1 lg:flex items-center">
                     <Link to="/">
-                        <img src={logo} alt="Site Logo" className="w-16 rounded-full" />
+                        <img src={logo} alt="Site Logo" className="w-8 rounded-full" />
                     </Link>
+                    <h2 className='text-3xl text-[#15C8A0] font-bold mt-2'>Warm<span className='text-white'>Hearts</span></h2>
                 </div>
 
                 {/* Navbar Links (centered on large screens) */}
@@ -66,9 +66,12 @@ const Navbar = () => {
                 {/* Mobile Menu and Icons (visible on small screens) */}
                 <div className="lg:hidden flex items-center justify-between w-full">
                     {/* Logo on left for small screens */}
-                    <Link to="/">
-                        <img src={logo} alt="Site Logo" className="h-10 w-auto" />
-                    </Link>
+                    <div className="lg:hidden gap-1 flex items-center">
+                        <Link to="/">
+                            <img src={logo} alt="Site Logo" className="w-6 rounded-full" />
+                        </Link>
+                        <h2 className='text-2xl text-[#15C8A0] font-bold mt-2'>Warm<span className='text-white'>Hearts</span></h2>
+                    </div>
 
                     {/* Hamburger Icon for small screens */}
 
@@ -86,7 +89,7 @@ const Navbar = () => {
             {/* Mobile Menu (Slide in from the right) */}
             {isMenuOpen && (
                 <div
-                    className="lg:hidden bg-gray-800 text-white w-52 fixed right-3 top-20 rounded-lg transform transition-transform duration-300 ease-in-out z-10"
+                    className="lg:hidden bg-gray-800 text-white w-52 fixed right-3 top-20 rounded-lg transform transition-transform duration-300 ease-in-out z-50"
                 >
                     <div className="flex flex-col p-6 space-y-4">
                         {/* User Profile or Login Button */}
@@ -108,8 +111,8 @@ const Navbar = () => {
                             </Link>
                         )}
                         <Link to="/" className="block">Home</Link>
-                        <Link to="/donation-campaigns" className="block">Donation Campaigns</Link>
-                        <Link to="/how-to-help" className="block">How to Help</Link>
+                        <Link to="/donation" className="block">Donation Campaigns</Link>
+                        <Link to="/help" className="block">How to Help</Link>
                         <Link to="/dashboard" className="block">Dashboard</Link>
                     </div>
                 </div>

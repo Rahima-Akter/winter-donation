@@ -12,10 +12,10 @@ const Home = () => {
                 <Banner></Banner>
             </div>
             <div className='w-11/12 mx-auto'>
-                <div className='lg:absolute lg:-bottom-[35%] lg:left-10 z-10'>
+                <div className='lg:absolute lg:-bottom-[30%] lg:left-10 z-10'>
                     <BannerCards></BannerCards>
                 </div>
-                <div className='lg:mt-40'>
+                <div className='lg:mt-40 my-12'>
                     <About></About>
                 </div>
             </div>

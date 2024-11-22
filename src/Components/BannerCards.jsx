@@ -34,7 +34,7 @@ const BannerCards = () => {
             {cardsData.map((card, index) => (
                 <div
                     key={index}
-                    className="relative group bg-white p-6 rounded-lg shadow-lg overflow-hidden cursor-pointer"
+                    className="relative group bg-white p-6 rounded-lg shadow-lg overflow-hidden cursor-pointer animate__animated animate__pulse"
                 >
                     {/* Background Image */}
                     <div

@@ -35,7 +35,7 @@ const UpcomingEvents = () => {
 
     return (
         <div className="w-11/12 mx-auto px-4 my-12">
-            <h2 className="text-center font-bold lg:text-4xl text-2xl text-[#15C8A0] mt-10 mb-8">
+            <h2 className="text-center font-bold lg:text-4xl text-2xl text-[#15C8A0] mt-10 mb-8 drop-shadow-lg  animate__animated animate__zoomIn">
                 Upcoming Events
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">

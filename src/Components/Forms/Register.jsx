@@ -68,7 +68,7 @@ const Register = () => {
             <Snowfall snowflakeCount={50} color="yellow" style={{ position: "fixed", width: "100vw", height: "100vh", }} />
 
             {/* Register Form Container */}
-            <div onSubmit={handleSubmit} className="bg-white bg-opacity-20 backdrop-blur-md border border-white border-opacity-30 px-10 py-5 rounded-lg shadow-lg relative overflow-hidden w-[90%] max-w-md my-10">
+            <div onSubmit={handleSubmit} className="bg-white bg-opacity-20 backdrop-blur-md border border-white border-opacity-30 px-10 py-5 rounded-lg shadow-lg relative overflow-hidden w-[90%] max-w-md animate__animated animate__bounceIn my-10">
                 {/* Frosted Snowflake Decorations */}
                 <div className="absolute top-[-50px] left-[-50px] text-blue-300 opacity-30 animate-spin-slow">
                     <FaSnowflake color="whitesmoke" size={200} />

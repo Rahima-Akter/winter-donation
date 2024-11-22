@@ -27,12 +27,12 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('../../public/howItWorksData.json')
+                loader: () => fetch('../howItWorksData.json')
             },
             {
                 path: '/donation',
                 element: <DonationCampaigns></DonationCampaigns>,
-                loader: () => fetch('../../public/donations.json'),
+                loader: () => fetch('../donations.json'),
             },
             {
                 path: '/help',
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <DonationDetails></DonationDetails>
                 </PrivateRoute>,
-                loader: () => fetch('../../public/donations.json')
+                loader: () => fetch('../donations.json')
             },
             {
                 path: '/login',

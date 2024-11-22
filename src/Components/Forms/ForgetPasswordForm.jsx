@@ -16,7 +16,7 @@ const ForgetPasswordForm = () => {
         console.log(email)
         hadleForgetPassword(email)
             .then(() => {
-                toast('A mail is sent to you to change your password')
+                toast('check your mail to change your password')
                 emailRef.current.value = '';
             })
             .catch(err => console.log('Error', err))
@@ -29,7 +29,7 @@ const ForgetPasswordForm = () => {
             <Snowfall snowflakeCount={50} color="yellow" style={{ position: "fixed", width: "100vw", height: "100vh", }} />
 
             {/* Login Form Container */}
-            <div className="bg-white bg-opacity-20 backdrop-blur-md border border-white border-opacity-30 p-10 rounded-lg shadow-lg relative overflow-hidden w-[90%] max-w-md">
+            <div className="bg-white bg-opacity-20 backdrop-blur-md border border-white border-opacity-30 p-10 rounded-lg shadow-lg relative overflow-hidden w-[90%] max-w-md animate__animated animate__bounce">
                 {/* Frosted Snowflake Decorations */}
                 <div className="absolute top-[-50px] left-[-50px] text-blue-300 opacity-30 animate-spin-slow">
                     <FaSnowflake size={200} />

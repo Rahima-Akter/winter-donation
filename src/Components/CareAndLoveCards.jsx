@@ -30,7 +30,7 @@ const CareAndLoveCards = () => {
                 {cardsData.map((card, index) => (
                     <div
                         key={index}
-                        className="relative group bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl w-[300px] h-[320px] flex flex-col items-center justify-center"
+                        className="relative group bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl w-[300px] h-[320px] flex flex-col items-center justify-centerv animate__animated animate__zoomIn"
                     >
                         {/* Icon */}
                         <div className="text-[#525459] mb-6 group-hover:-translate-y-2 transition-transform duration-300">

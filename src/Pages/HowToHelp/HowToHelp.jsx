@@ -6,19 +6,25 @@ import HelpForm from './HelpForm';
 
 const HowToHelp = () => {
   return (
-    <div>
+    <div className='bg-white pb-16 w-full relative'>
+      {/* <div className="absolute inset-0 bg-black opacity-50"></div> */}
       {/* how to help */}
-      <div className="p-8 relative z-10 bg-help-bg bg-cover">
+      <div className="p-8 relative z-10">
         {/* Cards container */}
         <div className="max-w-6xl mx-auto">
           {/* Title */}
-          <h2 className="text-4xl font-extrabold text-center text-[#15C8A0] mb-10 animate__animated animate__fadeIn animate__delay-1s">
+          <h2 className="md:text-5xl text-3xl font-extrabold text-center drop-shadow-lg text-[#15C8A0] mb-3 animate__animated  animate__slideInTop">
             How You Can Help
           </h2>
+          <div className="mb-10 text-center animate__animated animate__fadeIn">
+            <p className="md:text-lg text-xs text-black lg:w-[70%] mx-auto">
+              Together, we can make a big difference! Thank you for considering how you can help. Every contribution counts, no matter how big or small.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {/* Donation Items Section */}
-            <div className="p-6 bg-white rounded-lg shadow-2xl transform transition-all duration-700 hover:scale-105 animate__animated animate__slideInLeft animate__delay-2s">
+            <div className="p-6 bg-white rounded-lg shadow-2xl transform transition-all duration-700 hover:scale-105 animate__animated animate__slideInLeft">
               <div className="flex items-center mb-4">
                 <FaGift className="text-4xl text-green-500 mr-4" />
                 <h3 className="text-2xl font-semibold text-gray-800">1. Donate Items</h3>
@@ -35,7 +41,7 @@ const HowToHelp = () => {
             </div>
 
             {/* Monetary Donations Section */}
-            <div className="p-6 bg-white rounded-lg shadow-2xl transform transition-all duration-700 hover:scale-105 animate__animated animate__slideInRight animate__delay-3s">
+            <div className="p-6 bg-white rounded-lg shadow-2xl transform transition-all duration-700 hover:scale-105 animate__animated animate__slideInRight">
               <div className="flex items-center mb-4">
                 <FaRegMoneyBillAlt className="text-4xl text-yellow-500 mr-4" />
                 <h3 className="text-2xl font-semibold text-gray-800">2. Make a Monetary Donation</h3>
@@ -45,8 +51,8 @@ const HowToHelp = () => {
               </p>
               <div className="text-center">
                 <Link
-                  to="/donate"
-                  className="inline-block bg-gradient-to-r from-green-500 to-blue-500 text-white text-lg font-semibold py-3 px-8 rounded-full shadow-md hover:scale-110 transition-all duration-300 animate__animated animate__zoomIn animate__delay-4s"
+                  to="/donation"
+                  className="inline-block bg-gradient-to-r from-green-500 to-blue-500 text-white text-lg font-semibold py-3 px-8 rounded-full shadow-md hover:scale-110 transition-all duration-300 animate__animated animate__zoomIn animate__delay-1s"
                 >
                   Donate Now
                 </Link>
@@ -56,7 +62,7 @@ const HowToHelp = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10">
             {/* Volunteer Section */}
-            <div className="p-6 bg-white rounded-lg shadow-2xl transform transition-all duration-700 hover:scale-105 animate__animated animate__slideInUp animate__delay-1s">
+            <div className="p-6 bg-white rounded-lg shadow-2xl transform transition-all duration-700 hover:scale-105 animate__animated animate__slideInLeft">
               <div className="flex items-center mb-4">
                 <FaHandsHelping className="text-4xl text-purple-500 mr-4" />
                 <h3 className="text-2xl font-semibold text-gray-800">3. Volunteer Your Time</h3>
@@ -66,8 +72,8 @@ const HowToHelp = () => {
               </p>
               <div className="text-center">
                 <a
-                  href="/#"
-                  className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg font-semibold py-3 px-8 rounded-full shadow-md hover:scale-110 transition-all duration-300 animate__animated animate__zoomIn animate__delay-6s"
+                  href="#"
+                  className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg font-semibold py-3 px-8 rounded-full shadow-md hover:scale-110 transition-all duration-300 animate__animated animate__zoomIn animate__delay-1s"
                 >
                   Volunteer Now
                 </a>
@@ -75,7 +81,7 @@ const HowToHelp = () => {
             </div>
 
             {/* Spread the Word Section */}
-            <div className="p-6 bg-white rounded-lg shadow-2xl transform transition-all duration-700 hover:scale-105 animate__animated animate__slideInDown animate__delay-4s">
+            <div className="p-6 bg-white rounded-lg shadow-2xl transform transition-all duration-700 hover:scale-105 animate__animated animate__slideInRight">
               <div className="flex items-center mb-4">
                 <FaShareAlt className="text-4xl text-blue-500 mr-4" />
                 <h3 className="text-2xl font-semibold text-gray-800">4. Spread the Word</h3>
@@ -92,19 +98,15 @@ const HowToHelp = () => {
           </div>
 
           {/* Footer Section */}
-          <div className="mt-10 text-center animate__animated animate__fadeIn animate__delay-4s">
-            <p className="text-lg text-white">
-              Together, we can make a big difference! Thank you for considering how you can help. Every contribution counts, no matter how big or small.
-            </p>
-          </div>
+          
         </div>
 
         {/* Snowfall Effect */}
-        <Snowfall color="white" snowflakeCount={50} />
+        <Snowfall color="yellow" snowflakeCount={50} />
       </div>
 
       {/* HelpForm */}
-      <div className='my-6'> 
+      <div className=''>
         <HelpForm></HelpForm>
       </div>
     </div>

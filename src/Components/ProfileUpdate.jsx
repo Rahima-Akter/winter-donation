@@ -32,7 +32,7 @@ const ProfileUpdate = () => {
             <Snowfall snowflakeCount={50} color="yellow" style={{ position: "fixed", width: "100vw", height: "100vh" }} />
 
             {/* Profile Update Form */}
-            <div className="bg-white bg-opacity-20 backdrop-blur-md border border-white border-opacity-30 p-10 rounded-lg shadow-lg relative overflow-hidden w-[90%] max-w-md">
+            <div className="bg-white bg-opacity-20 backdrop-blur-md border border-white border-opacity-30 p-10 rounded-lg shadow-lg relative overflow-hidden w-[90%] max-w-md animate__animated animate__slideInLeft">
                 {/* Frosted Snowflake Decorations */}
                 <div className="absolute top-[-50px] left-[-50px] text-blue-300 opacity-30 animate-spin-slow">
                     <FaSnowflake size={200} />
