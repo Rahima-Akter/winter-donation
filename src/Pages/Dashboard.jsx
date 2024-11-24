@@ -11,14 +11,14 @@ const Dashboard = () => {
             {/* Snowfall Background */}
             <div className="bg-white bg-opacity-20 backdrop-blur-md border border-white border-opacity-30 rounded-lg p-6 md:p-10 lg:py-12 shadow-lg lg:w-7/12 md:w-6/12 w-10/12 mx-auto relative animate__animated animate__zoomIn">
                 {/* Welcome Message */}
-                <h1 className="text-center text-white text-4xl font-bold mb-6 lg:block hidden -ml-32">
+                <h1 className="text-center text-white text-4xl font-bold mb-6 lg:block hidden ml-44">
                     Welcome, {user?.displayName}!
                 </h1>
 
                 {/* User Profile Section */}
                 <div className="flex flex-col lg:flex-row items-center gap-6 w-[80%] mx-auto">
                     {/* User Image */}
-                    <div className="relative w-32 h-32 lg:w-[50%] lg:h-[35%] lg:rounded-md rounded-full overflow-hidden shadow-lg border-4 border-white lg:border-none">
+                    <div className="relative w-32 h-32 lg:w-52 lg:h-52 rounded-full overflow-hidden shadow-lg border-4 border-white lg:border-none">
                         <img
                             src={user?.photoURL || <FaUser />}
                             alt="User Profile"

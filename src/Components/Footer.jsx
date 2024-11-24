@@ -53,13 +53,13 @@ const Footer = () => {
                     </div>
 
                     {/* Navigation Links */}
-                    <div className="">
-                        <h4 className="text-[20px] font-bold">Our Navigation</h4>
-                        <div className='border border-teal-500 w-[30%] mb-4'></div>
+                    <div className="group">
+                        <h4 className="text-[20px] font-bold ">Our Navigation</h4>
+                        <div className='border border-teal-500 w-[30%] mb-4 group-hover:w-[60%] duration-1000'></div>
                         <ul>
 
                             {navLinks.map((link, index) => (
-                                <div key={index} className='flex gap-1 hover:text-teal-500 hover:translate-x-2 transition-transform duration-300'><MdOutlineDoubleArrow className='text-teal-500 mt-[2px]' /><li className="mb-2">
+                                <div key={index} className='flex gap-1 hover:text-teal-500 hover:translate-x-2 transition-transform duration-300 '><MdOutlineDoubleArrow className='text-teal-500 mt-[2px]' /><li className="mb-2">
                                     {link}
                                 </li></div>
                             ))}
@@ -67,9 +67,9 @@ const Footer = () => {
                     </div>
 
                     {/* Services */}
-                    <div className="">
+                    <div className="group">
                         <h4 className="text-[20px] font-bold">Our Service</h4>
-                        <div className='border border-teal-500 w-[30%] mb-4'></div>
+                        <div className='border border-teal-500 w-[30%] mb-4 group-hover:w-[60%] duration-1000'></div>
                         <ul>
                             {services.map((service, index) => (
                                 <div key={index} className='flex gap-1 hover:text-teal-500 hover:translate-x-2 transition-transform duration-300'><MdOutlineDoubleArrow className='text-teal-500 mt-[2px]' /><li className="mb-2">
@@ -81,8 +81,8 @@ const Footer = () => {
 
                     {/* Gallery */}
                     <div className="">
-                        <h4 className="text-[20px] font-bold">Our Gallery</h4>
-                        <div className='border border-teal-500 w-[30%] mb-4'></div>
+                        <h4 className="text-[20px] font-bold group">Our Gallery</h4>
+                        <div className='border border-teal-500 w-[30%] mb-4 hover:w-[60%] duration-1000'></div>
                         <div className="grid md:grid-cols-3 grid-cols-3 gap-1 md:w-64">
                             {galleryImages.map((image, index) => (
                                 <div key={index} className="relative group w-full h-20 overflow-hidden">

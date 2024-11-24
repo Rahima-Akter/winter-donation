@@ -1,8 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const HelpForm = () => {
+  const [donationAmount, setDonationAmount] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [accountNumber, setAccountNumber] = useState('');
+  const [message, setMessage] = useState('');
+
+  // Validate form fields
+  const isFormValid = () => {
+    return (
+      donationAmount &&
+      name &&
+      email &&
+      accountNumber &&
+      message
+    );
+  };
+
+  // Handle form submission
+  const handleSubmit = (event) => {
+    event.preventDefault(); 
+
+    if (isFormValid()) {
+      // success toast message
+      toast.success('Thank you for your generous donation❤');
+      // Reset form values
+      setDonationAmount('');
+      setName('');
+      setEmail('');
+      setAccountNumber('');
+      setMessage('');
+    } else {
+      
+      toast.error('Please fill out all required fields.');
+    }
+  };
+
   return (
-    <section className="relative py-10 mb-20">
+    <section id="moneyForm" className="relative py-10 mb-20">
       <div className="flex flex-col md:flex-row items-center w-full">
         {/* Left Section with background image */}
         <div
@@ -13,10 +50,9 @@ const HelpForm = () => {
             backgroundPosition: 'center', // Ensure the image is centered
           }}
         >
-
           <div className="absolute inset-0 bg-black opacity-50"></div>
           {/* text contents */}
-          <div className='absolute flex flex-col justify-center items-start lg:p-8 md:pl-3 px-5 text-white lg:w-2/4 md:w-[60%] my-14 lg:ml-28 animate__animated animate__slideInLeft'>
+          <div className="absolute flex flex-col justify-center items-start lg:p-8 md:pl-3 px-5 text-white lg:w-2/4 md:w-[60%] my-14 lg:ml-28 animate__animated animate__slideInLeft">
             <h2 className="lg:text-4xl text-3xl font-bold mb-4">Join your hand with us for a better life and future</h2>
             <p className="mb-6">
               Together we can bring warmth and comfort to those in need this winter. Contribute to help provide blankets, clothes, and food for underprivileged families in Bangladesh.
@@ -52,45 +88,57 @@ const HelpForm = () => {
         {/* form Section */}
         <div className="lg:w-[32%] md:w-[40%] w-[80%] bg-white shadow-lg lg:p-8 p-4 lg:mt-0 lg:ml-8 md:absolute right-20 lg:right-48 md:top-24 animate__animated animate__slideInRight -mr-20">
           <h3 className="text-2xl font-semibold text-gray-800 mb-6">Interested in Donating?</h3>
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <input
               type="text"
+              value={donationAmount}
+              onChange={(e) => setDonationAmount(e.target.value)}
               placeholder="Enter Donation Amount"
+              required
               className="w-full p-3 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
             />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input
                 type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 placeholder="Your Name"
                 className="w-full p-3 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
               />
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email Address"
+                required
                 className="w-full p-3 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
               />
             </div>
             <input
               type="text"
-              placeholder="Phone Number"
+              value={accountNumber}
+              onChange={(e) => setAccountNumber(e.target.value)}
+              placeholder="Enter your account number (e.g. Bkash, Nagad, Bank Ac. No.)"
+              required
               className="w-full p-3 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
             />
             <textarea
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               placeholder="Write Message"
               rows="4"
+              required
               className="w-full p-3 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
             />
             <button
               type="submit"
               className="w-full bg-teal-600 text-white py-3 px-6 rounded-lg shadow hover:bg-teal-700 transition duration-300"
             >
-              Send
+              Donate
             </button>
           </form>
         </div>
       </div>
-
-
     </section>
   );
 };

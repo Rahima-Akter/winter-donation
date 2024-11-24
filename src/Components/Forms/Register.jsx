@@ -1,8 +1,9 @@
 import React, { useContext, useState } from "react";
-import Snowfall from "react-snowfall"; 
+import Snowfall from "react-snowfall";
 import { FaEye, FaEyeSlash, FaGoogle, FaSnowflake } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../../Context/Context";
+import { toast } from "react-toastify";
 
 const Register = () => {
     const { handleGoogleLogin, handleRegister, setLoading, setUser, manageProfile } = useContext(authContext)
@@ -38,9 +39,10 @@ const Register = () => {
 
         handleRegister(email, password)
             .then(result => {
-                setLoading(true)
                 manageProfile(name, photoUrl)
                 setUser(result.user)
+                navigate('/')
+                toast.success('registration successfull')
             })
             .catch = (err) => {
                 console.log("this is an error", err)
@@ -55,6 +57,7 @@ const Register = () => {
                 setLoading(true)
                 setUser(result.user);  // user info
                 return result.user; // Optionally return user data
+
             })
             .catch((error) => {
                 console.error("Error during Google login: ", error);
@@ -157,7 +160,6 @@ const Register = () => {
                     {/* Submit Button */}
                     <button
                         type="submit"
-                        onClick={() => navigate('/')}
                         className="w-full btn bg-transparent text-gray-300 hover:text-black font-bold py-3 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
                     >
                         Register

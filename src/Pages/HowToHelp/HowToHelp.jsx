@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaGift, FaHandsHelping, FaRegMoneyBillAlt, FaShareAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import Snowfall from 'react-snowfall';
-import HelpForm from './HelpForm';
+import VolunteerForm from './VolunteerForm';
+import HelpForm from '../HowToHelp/HelpForm';
+import { IoIosCloseCircle } from 'react-icons/io';
 
 const HowToHelp = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Function to open the modal
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  // Function to close the modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <div className='bg-white pb-16 w-full relative'>
-      {/* <div className="absolute inset-0 bg-black opacity-50"></div> */}
-      {/* how to help */}
+    <div className="bg-white pb-16 w-full relative">
       <div className="p-8 relative z-10">
         {/* Cards container */}
         <div className="max-w-6xl mx-auto">
           {/* Title */}
-          <h2 className="md:text-5xl text-3xl font-extrabold text-center drop-shadow-lg text-[#15C8A0] mb-3 animate__animated  animate__slideInTop">
+          <h2 className="md:text-5xl text-3xl font-extrabold text-center drop-shadow-lg text-[#15C8A0] mb-3 animate__animated animate__slideInTop">
             How You Can Help
           </h2>
           <div className="mb-10 text-center animate__animated animate__fadeIn">
@@ -50,12 +61,12 @@ const HowToHelp = () => {
                 Monetary donations allow us to provide exactly what is needed. Your financial contributions go directly towards supporting essential services and purchasing necessary items.
               </p>
               <div className="text-center">
-                <Link
-                  to="/donation"
+                <a
+                  href="#moneyForm"
                   className="inline-block bg-gradient-to-r from-green-500 to-blue-500 text-white text-lg font-semibold py-3 px-8 rounded-full shadow-md hover:scale-110 transition-all duration-300 animate__animated animate__zoomIn animate__delay-1s"
                 >
                   Donate Now
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -71,12 +82,12 @@ const HowToHelp = () => {
                 Volunteering is one of the most impactful ways to give back. Whether it’s helping with the sorting of donations or assisting at community events, your time and efforts are invaluable.
               </p>
               <div className="text-center">
-                <a
-                  href="#"
+                <button
+                  onClick={openModal} // Open the modal on button click
                   className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg font-semibold py-3 px-8 rounded-full shadow-md hover:scale-110 transition-all duration-300 animate__animated animate__zoomIn animate__delay-1s"
                 >
                   Volunteer Now
-                </a>
+                </button>
               </div>
             </div>
 
@@ -96,19 +107,30 @@ const HowToHelp = () => {
               </ul>
             </div>
           </div>
-
-          {/* Footer Section */}
-          
         </div>
 
         {/* Snowfall Effect */}
         <Snowfall color="yellow" snowflakeCount={50} />
       </div>
 
-      {/* HelpForm */}
-      <div className=''>
-        <HelpForm></HelpForm>
-      </div>
+      <HelpForm />
+
+      {/* Modal for Volunteer Form */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-8 rounded-lg shadow-lg w-11/12 max-w-md relative">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Volunteer Form</h3>
+            <VolunteerForm /> {/* Volunteer form  */}
+            {/* Close Button */}
+            <button
+              onClick={closeModal} // Close the modal
+              className="absolute top-2 right-2 text-gray-800 text-2xl"
+            >
+              <IoIosCloseCircle />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

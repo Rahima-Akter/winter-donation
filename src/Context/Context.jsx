@@ -6,8 +6,8 @@ import auth from "../firebase/firebase.config"
 export const authContext = createContext()
 
 const Context = ({ children }) => {
-    const [loading, setLoading] = useState(true)
     const [user, setUser] = useState(null)
+    const [loading, setLoading] = useState(true)
 
 
     const handleRegister = (email, password) => {
@@ -28,8 +28,7 @@ const Context = ({ children }) => {
     const manageProfile = (name, image) => {
         return updateProfile(auth.currentUser, {
             displayName: name, photoURL: image
-        })
-        .then(() => {
+        }).then(() => {
             const updatedProfile = auth.currentUser;
             setUser(updatedProfile)
         })
@@ -44,7 +43,7 @@ const Context = ({ children }) => {
     // google Login
     const googleProvider = new GoogleAuthProvider();
     const handleGoogleLogin = () => {
-       return signInWithPopup(auth, googleProvider)
+        return signInWithPopup(auth, googleProvider)
     };
 
     // observer

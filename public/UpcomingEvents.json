@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Warm Clothes Distribution Drive",
+        "location": "Community Center, Dhaka",
+        "time": "Sat 10:00 AM - 12:00 PM",
+        "description": "Join us in this heartwarming initiative to distribute warm clothes to those who are less fortunate and struggling during the winter season. Volunteers will help sort and distribute clothes to people in need, ensuring they have the warmth they deserve during the cold months.",
+        "detailedDescription": "This event aims to bring together the community to provide essential winter clothing to individuals and families who may not have access to warm attire. Volunteers will assist with sorting donated clothes, organizing them by size, and distributing them at various points in the community. The event will also feature educational materials on how people can contribute to future drives and support the cause year-round.",
+        "img": "https://img.freepik.com/free-vector/hand-drawn-flat-charity-event-facebook-post_23-2149398755.jpg?t=st=1730501055~exp=1730504655~hmac=23a5cb0ae1812d57395c1f8e9f486770f59841f0ffe5a6c5b0cd6ae8abf28756"
+    },
+    {
+        "id": 2,
+        "title": "Food Package Preparation",
+        "location": "Relief Hub, Chittagong",
+        "time": "Sun 3:00 PM - 5:00 PM",
+        "description": "Help us prepare food packages for underprivileged families in need. Your assistance will ensure that families in our community have enough to eat during the challenging times of the year.",
+        "detailedDescription": "This event involves preparing food packages that will be distributed to families and individuals in need. Volunteers will assist in packing non-perishable foods, such as rice, lentils, canned goods, and other essentials, into boxes. These boxes will be delivered to homes that are struggling to make ends meet. Your participation will directly impact the lives of families who rely on food donations to survive. This is a great opportunity for individuals and groups to come together and make a tangible difference.",
+        "img": "https://www.shutterstock.com/image-vector/donation-food-distribution-concept-volunteer-260nw-1627524631.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Fundraising for Winter Relief",
+        "location": "City Hall, Sylhet",
+        "time": "Sun 10:00 AM - 1:00 PM",
+        "description": "Attend a special fundraising concert to contribute to winter relief efforts aimed at providing essential items like blankets, clothing, and heating to those affected by the cold.",
+        "detailedDescription": "Join us for a concert featuring local artists and performances aimed at raising funds for winter relief efforts. The funds raised will go towards providing warm clothing, blankets, food, and heating to vulnerable individuals in our community. In addition to the performances, there will be information booths about how to help and get involved in future fundraising events. It’s an event not just for music lovers but for anyone who wants to contribute to the well-being of others this winter season.",
+        "img": "https://img.freepik.com/free-vector/fundraising-event-template-design_23-2150806468.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Blanket Donation Campaign",
+        "location": "Local School, Rajshahi",
+        "time": "Thu 4:00 PM - 6:00 PM",
+        "description": "Donate blankets to help families stay warm this winter. Your generous donation will help ensure no one is left out in the cold.",
+        "detailedDescription": "The Blanket Donation Campaign focuses on collecting and distributing blankets to families in need across Rajshahi. Volunteers will assist with collecting donated blankets, sorting them, and packaging them for distribution to individuals and families living in cold conditions. This event is essential in providing warmth and comfort to the most vulnerable members of the community. The campaign encourages both blanket donations and financial contributions to support ongoing winter relief efforts throughout the season.",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_N6Pfg8hhHKvOW24php8dczKtFIoRq0GDxw&s"
+    }
+]
